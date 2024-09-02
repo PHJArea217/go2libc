@@ -27,3 +27,7 @@ bind, connect, listen, accept, openat
 * otherwise, allow syscall
 
 The SIGSYS handler would make the syscall itself, but through the libc wrapper function, in a way such that it can be intercepted with other LD_PRELOAD libraries.
+
+# Limitations
+
+* Must compile go app with `CGO_ENABLED=1`.
